@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "hw-01-applied-python"
+version = "0.1.0"
+description = "Homework number 1 for the course \"Applied Python\" for the master's program \"Machine Learning and High-Load Systems\" HSE."
+authors = ["Anton Zaitsev <antonzaitsev474@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "hw_01_applied_python"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+alembic = "^1.13.0"
+SQLAlchemy = "^2.0.23"
+psycopg2 = "^2.9.9"
+streamlit = "^1.29.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
