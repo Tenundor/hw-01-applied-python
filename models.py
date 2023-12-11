@@ -79,3 +79,32 @@ class CloseLoan(Base):
         sa.Boolean,
         nullable=False,
     )
+
+
+class AgreementSummary(Base):
+    """Сводная информация по договору, которая будет использоваться для обучения
+    модели классификации"""
+    __tablename__ = "agreement_summary"
+
+    id = sa.Column(sa.Integer, primary_key=True)
+    agreement_id = sa.Column(
+        sa.Integer,
+        sa.ForeignKey("agreement.id"),
+        nullable=False,
+        unique=True,
+    )
+    target = sa.Column(sa.Boolean, nullable=False)
+    age = sa.Column(sa.Integer, nullable=False)
+    gender = sa.Column(sa.Integer, nullable=False)
+    child_total = sa.Column(sa.Integer, nullable=False)
+    dependants = sa.Column(sa.Integer, nullable=False)
+    socstatus_work_fl = sa.Column(sa.Integer, nullable=False)
+    socstatus_pens_fl = sa.Column(sa.Integer, nullable=False)
+    fl_presence_fl = sa.Column(sa.Boolean, nullable=False)
+    own_auto = sa.Column(sa.Integer, nullable=False)
+    personal_income = sa.Column(
+        sa.Numeric(12, 2, asdecimal=True),
+        nullable=True,
+    )
+    loan_num_total = sa.Column(sa.Integer, nullable=False)
+    loan_num_closed = sa.Column(sa.Integer, nullable=False)
