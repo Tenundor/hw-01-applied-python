@@ -27,11 +27,11 @@ def main():
     logging.info("The function for loading banking data from csv files into the "
                  "database has begun execution")
     filenames_with_models = (
-        ("datasets/D_clients.csv", ClientModel, Client),
-        ("datasets/D_target.csv", AgreementModel, Agreement),
-        ("datasets/D_salary.csv", SalaryModel, Salary),
-        ("datasets/D_loan.csv", LoanModel, Loan),
-        ("datasets/D_close_loan.csv", CloseLoanModel, CloseLoan),
+        ("data/D_clients.csv", ClientModel, Client),
+        ("data/D_target.csv", AgreementModel, Agreement),
+        ("data/D_salary.csv", SalaryModel, Salary),
+        ("data/D_loan.csv", LoanModel, Loan),
+        ("data/D_close_loan.csv", CloseLoanModel, CloseLoan),
     )
     for filename, pydantic_model, table_model in filenames_with_models:
         logging.info(f"Reading from file '{filename}'")

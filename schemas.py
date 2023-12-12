@@ -9,14 +9,14 @@ class Gender(enum.Enum):
 
 
 class SocStatusWorkType(enum.Enum):
-    employed = "0"
-    unemployed = "1"
+    employed = "1"
+    unemployed = "0"
     unknown = "2"
 
 
 class SocStatusPensType(enum.Enum):
-    pensioner = "0"
-    not_pensioner = "1"
+    pensioner = "1"
+    not_pensioner = "0"
 
 
 class ClientModel(BaseModel):
