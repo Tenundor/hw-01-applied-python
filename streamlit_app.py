@@ -13,16 +13,7 @@ load_dotenv()
 
 @st.cache_data
 def load_data():
-    with engine.connect() as connection:
-        return pd.read_sql(
-            """
-            SELECT target, age, gender, child_total, dependants,
-                   socstatus_work_fl, socstatus_pens_fl, fl_presence_fl,
-                   own_auto, personal_income, loan_num_total, loan_num_closed 
-            FROM agreement_summary
-            """,
-            connection
-        )
+    return pd.read_pickle("data/df.pkl")
 
 
 def write_feature_distribution_graphs(df: pd.DataFrame):
