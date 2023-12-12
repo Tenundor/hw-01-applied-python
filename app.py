@@ -1,11 +1,14 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import plotly.express as px
 import seaborn as sns
+from dotenv import load_dotenv
 from PIL import Image
 
 from services import engine
+
+
+load_dotenv()
 
 
 @st.cache_data
@@ -111,7 +114,7 @@ def write_pairwise_scatterplots(df: pd.DataFrame):
     st.pyplot(fig)
 
 
-def write_featers_target_correlations(df: pd.DataFrame):
+def write_feauters_target_correlations(df: pd.DataFrame):
     st.write("## Диаграммы отношения значений признаков к целевой переменной")
     fig, axs = plt.subplots(nrows=3, ncols=2, figsize=(10, 10))
     axs = axs.flatten()
@@ -154,7 +157,7 @@ def process_main_page():
     write_feature_distribution_graphs(df)
     write_df_correlations(df)
     write_pairwise_scatterplots(df)
-    write_featers_target_correlations(df)
+    write_feauters_target_correlations(df)
 
     st.write("## Статистические характеристики набора данных")
     st.write(df.describe())
