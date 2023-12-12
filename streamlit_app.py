@@ -5,8 +5,6 @@ import seaborn as sns
 from dotenv import load_dotenv
 from PIL import Image
 
-from services import engine
-
 
 load_dotenv()
 

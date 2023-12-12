@@ -5,13 +5,9 @@ description = "Homework number 1 for the course \"Applied Python\" for the maste
 authors = ["Anton Zaitsev <antonzaitsev474@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "hw_01_applied_python"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-alembic = "^1.13.0"
-SQLAlchemy = "^2.0.23"
-psycopg2 = "^2.9.9"
 streamlit = "^1.29.0"
 python-dotenv = "^1.0.0"
 pydantic = "^2.5.2"
