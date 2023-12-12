@@ -27,4 +27,4 @@ Homework number 1 for the course "Applied Python" for the master's program "Mach
 - запустить миграцию базы данных `alembic upgrade head`
 - запустить скрипт для наполнения БД из csv файлов `python load_data_from_csv_to_db.py`
 - запустить скрипт для агрегации данных по клиентам `python aggregate_and_save_agreement_summary.py`
-- запустить streamlit приложение `streamlit run app.py`
+- запустить streamlit приложение `streamlit run streamlit_app.py`
